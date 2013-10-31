@@ -7,9 +7,47 @@ var assert = require('assert'),
 	MongoStore = require('./')(connect),
 	MongoClient = require('mongodb').MongoClient;
 
+var testsCount = 3;
+
+var done = (function () {
+	var count = 0;
+	return function () {
+		++count;
+		if (count == testsCount) {
+			console.log('done');
+			process.exit(0);
+		}
+	};
+})();
+
 var store = new MongoStore;
 
+// simple test
 store.on('connect', function() {
+	baseTest.apply(this);
+});
+
+// test with initialized db object
+MongoClient.connect('mongodb://127.0.0.1:27017/testdb', function(err, db) {
+	var store = new MongoStore({db: db});
+	store.on('connect', function() {
+		baseTest.apply(this);
+	});
+});
+
+// test mongodb auth
+MongoClient.connect('mongodb://127.0.0.1:27017/testauth', function(err, db) {
+	db.addUser('user', 'pass', function(err, res) {
+		assert.ok(!err, '#addUser error');
+		var store = new MongoStore({user: 'user', password: 'pass', db: 'testauth'});
+		store.on('connect', function() {
+			baseTest.apply(this);
+		});
+	});
+});
+
+// Basic functionality test
+function baseTest() {
 	// #set()
 	var self = this;
 	self.set('123', {cookie: {maxAge: 2000}, name: 'tj'}, function(err, ok) {
@@ -27,10 +65,9 @@ store.on('connect', function() {
 			// #set null
 			self.set('123', {cookie: {maxAge: 2000}, name: 'tj'}, function() {
 				self.destroy('123', function() {
-					console.log('done');
-					process.exit(0);
+					done();
 				});
 			});
 		});
 	});
-});
+}

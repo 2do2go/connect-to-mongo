@@ -1,6 +1,6 @@
 # Connect MongoDB
 
-connect-to-mongodb is a MongoDB session store backed by [node_redis](http://github.com/mranney/node_redis), and is insanely fast :). Requires mongodb >= `2.2.0` for ttl collections.
+connect-to-mongo is a MongoDB session store backed by [node-mongodb-native](https://github.com/mongodb/node-mongodb-native). Requires mongodb >= `2.2.0` for ttl collections.
 
 ## Installation
 

@@ -8,7 +8,6 @@ var assert = require('assert'),
 	MongoClient = require('mongodb').MongoClient;
 
 var store = new MongoStore;
-var store_alt = new MongoStore({db: });
 
 store.on('connect', function() {
 	// #set()

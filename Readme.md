@@ -15,7 +15,7 @@ connect-to-mongo is a MongoDB session store backed by [node-mongodb-native](http
   - `ttl` MongoDB session TTL in seconds
   - `user` User for MongoDB
   - `password` Password for MongoDB authentication
-  - `auto_reconnect` This is passed directly to the MongoDB Server constructor as the auto_reconnect option defaulting to false
+  - `ssl` Use SSL to connect to MongoDB defaulting to false
   - `prefix` Key prefix defaulting to "sess:"
 
 ## Usage

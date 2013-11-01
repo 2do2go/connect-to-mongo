@@ -3,7 +3,7 @@
 	"description": "Mongo session store for Connect",
 	"version": "0.1.0",
 	"author": "Pavel Vlasov <freakycue@gmail.com>",
-	"main": "./lib/connect-to-mongo",
+	"main": "./lib",
 	"repository": {
 		"type": "git", "url": "git://github.com/2do2go/connect-to-mongo.git"
 	},

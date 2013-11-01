@@ -4,7 +4,7 @@
 
 var assert = require('assert'),
 	connect = require('connect'),
-	MongoStore = require('./')(connect),
+	MongoStore = require('./lib')(connect),
 	MongoClient = require('mongodb').MongoClient;
 
 var testsCount = 3;

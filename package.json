@@ -3,9 +3,12 @@
 	"description": "Mongo session store for Connect",
 	"version": "0.1.0",
 	"author": "Pavel Vlasov <freakycue@gmail.com>",
-	"main": "./index.js",
-	"repository": {"type": "git", "url": "git@github.com:2do2go/connect-to-mongo.git"},
-	"dependencies": {"mongodb": "1.3.x"},
+	"main": "./lib/connect-to-mongo",
+	"repository": {
+		"type": "git", "url": "git://github.com/2do2go/connect-to-mongo.git"
+	},
+	"keywords": ["connect", "session", "store", "mongo", "mongodb"],
+	"dependencies": {"mongodb": ">=1.3.0"},
 	"devDependencies": {"connect": "*"},
 	"engines": {"node": "*"},
 	"bugs": {

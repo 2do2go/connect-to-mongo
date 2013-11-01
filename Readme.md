@@ -1,10 +1,12 @@
 # Connect MongoDB
 
-connect-to-mongo is a MongoDB session store backed by [node-mongodb-native](https://github.com/mongodb/node-mongodb-native) = 1.3.x. Requires mongodb >= `2.2.0` for ttl collections.
+connect-to-mongo is a MongoDB session store backed by [node-mongodb-native](https://github.com/mongodb/node-mongodb-native) >= 1.3. Requires mongodb >= `2.2.0` for ttl collections.
 
 ## Installation
 
-	  $ npm install connect-to-mongodb
+```sh
+  npm install connect-to-mongodb
+```
 
 ## Options
 
@@ -19,15 +21,18 @@ connect-to-mongo is a MongoDB session store backed by [node-mongodb-native](http
 
 ## Usage
 
-    var connect = require('connect')
-	 	  , MongoStore = require('connect-to-mongodb')(connect);
+```js
+var connect = require('connect'),
+  MongoStore = require('connect-to-mongodb')(connect);
 
-    connect()
-      .use(connect.session({store: new MongoStore(options), secret: 'keyboard cat'}))
+connect().use(connect.session({
+  store: new MongoStore(options), secret: 'keyboard cat'
+}));
+```
 
- This means express users may do the following, since `express.session.Store` points to the `connect.session.Store` function:
+This means express users may do the following, since `express.session.Store` points to the `connect.session.Store` function:
     var MongoStore = require('connect-to-mongodb')(express);
 
-# License
+## License
 
   MIT

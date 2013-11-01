@@ -48,9 +48,9 @@ MongoClient.connect('mongodb://127.0.0.1:27017/testauth', function(err, db) {
 
 // Basic functionality test
 function baseTest() {
-	// #set()
 	var self = this;
-	self.set('123', {cookie: {maxAge: 2000}, name: 'tj'}, function(err, ok) {
+	// #set()
+	self.set('123', {cookie: {maxAge: 2000}, name: 'name'}, function(err, ok) {
 		assert.ok(!err, '#set() got an error');
 		assert.ok(ok, '#set() is not ok');
 
@@ -59,11 +59,11 @@ function baseTest() {
 			assert.ok(!err, '#get() got an error');
 			assert.deepEqual({
 				cookie: {maxAge: 2000},
-				name: 'tj'
+				name: 'name'
 			}, data);
 
 			// #set null
-			self.set('123', {cookie: {maxAge: 2000}, name: 'tj'}, function() {
+			self.set('123', {cookie: {maxAge: 2000}, name: 'name'}, function() {
 				self.destroy('123', function() {
 					done();
 				});

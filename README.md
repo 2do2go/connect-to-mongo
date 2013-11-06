@@ -14,7 +14,7 @@ connect-to-mongo is a MongoDB session store backed by [node-mongodb-native](http
   - `collection` MongoDB collection name defaulting to "sessions"
   - `host` MongoDB server hostname defaulting to "127.0.0.1"
   - `port` MongoDB server port defaulting to 27017
-  - `ttl` MongoDB session TTL in seconds
+  - `ttl` MongoDB session TTL in milliseconds
   - `user` User for MongoDB
   - `password` Password for MongoDB authentication
   - `ssl` Use SSL to connect to MongoDB defaulting to false

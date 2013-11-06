@@ -1,7 +1,7 @@
 {
 	"name": "connect-to-mongo",
 	"description": "Mongo session store for Connect",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"author": "Pavel Vlasov <freakycue@gmail.com>",
 	"main": "./lib",
 	"repository": {

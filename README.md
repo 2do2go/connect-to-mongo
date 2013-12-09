@@ -5,7 +5,7 @@ connect-to-mongo is a MongoDB session store backed by [node-mongodb-native](http
 ## Installation
 
 ```sh
-  npm install connect-to-mongodb
+  npm install connect-to-mongo
 ```
 
 ## Options
@@ -23,7 +23,7 @@ connect-to-mongo is a MongoDB session store backed by [node-mongodb-native](http
 
 ```js
 var connect = require('connect'),
-  MongoStore = require('connect-to-mongodb')(connect);
+  MongoStore = require('connect-to-mongo')(connect);
 
 connect().use(connect.session({
   store: new MongoStore(options), secret: 'keyboard cat'
@@ -31,7 +31,7 @@ connect().use(connect.session({
 ```
 
 This means express users may do the following, since `express.session.Store` points to the `connect.session.Store` function:
-    var MongoStore = require('connect-to-mongodb')(express);
+    var MongoStore = require('connect-to-mongo')(express);
 
 ## License
 

@@ -18,6 +18,7 @@ connect-to-mongo is a MongoDB session store backed by [node-mongodb-native](http
   - `user` user for MongoDB
   - `password` password for MongoDB authentication
   - `ssl` use SSL to connect to MongoDB (`false` by default)
+  - `url` mongo connection string in form `mongodb://...`. You can use this field as replacement for all previous.
 
 ## Usage
 

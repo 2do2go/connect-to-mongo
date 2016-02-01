@@ -1,6 +1,6 @@
 # Connect MongoDB
 
-connect-to-mongo is a MongoDB session store backed by [node-mongodb-native](https://github.com/mongodb/node-mongodb-native) >= 1.3. Requires mongodb >= `2.2.0` for ttl collections.
+connect-to-mongo is a MongoDB session store backed by [node-mongodb-native](https://github.com/mongodb/node-mongodb-native) >= 2.0. Requires mongodb >= `2.2.0` for ttl collections.
 
 ## Installation
 

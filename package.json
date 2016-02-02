@@ -2,17 +2,21 @@
 	"name": "connect-to-mongo",
 	"description": "Mongo session store for Connect",
 	"version": "0.2.0",
-	"author": "Pavel Vlasov <freakycue@gmail.com>",
+	"author": "2do2go team <dev.2do2go@gmail.com>",
 	"main": "./lib",
 	"repository": {
-		"type": "git", "url": "git://github.com/2do2go/connect-to-mongo.git"
+		"type": "git",
+		"url": "git://github.com/2do2go/connect-to-mongo.git"
 	},
 	"keywords": ["connect", "session", "store", "mongo", "mongodb"],
-	"dependencies": {"mongodb": ">=2.0.0"},
-	"devDependencies": {"connect": "*"},
-	"engines": {"node": "*"},
+	"dependencies": {
+		"mongodb": ">=2.0.0"
+	},
+	"devDependencies": {
+		"connect": "2.x.x"
+	},
 	"bugs": {
-		"url": "https://github.com/2d2ogo/connect-to-mongo/issues"
+		"url": "https://github.com/2do2go/connect-to-mongo/issues"
 	},
 	"scripts":{
 		"test":"node test.js"
